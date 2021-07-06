@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using DG.Tweening;
 
 public class Sphere : MonoBehaviour
 {
@@ -30,7 +31,9 @@ public class Sphere : MonoBehaviour
         canCollision = true;
 
         Debug.Log("JumpClick");
-        gameObject.transform.position += new Vector3(0, 10, 0);
+        //gameObject.transform.position += new Vector3(0, 10, 0);
+        //gameObject.transform.DOLocalMove(new Vector3(0, 10, 0),0.5f);
+        gameObject.transform.DOLocalMoveY(10, 0.5f);
     }
 
     // 碰撞开始

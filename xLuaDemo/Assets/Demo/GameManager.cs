@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 using System;
+using DG.Tweening;
 
 // 礼物管理类
 public class GameManager
@@ -39,23 +40,68 @@ public class GameManager
     // 变化cube
     public void ChangeCube (FloorCube sp)
     {
-        ArrayList changeArray = new ArrayList();
+        ArrayList east = new ArrayList();
+        ArrayList west = new ArrayList();
+        ArrayList south = new ArrayList();
+        ArrayList north = new ArrayList();
+
         foreach (FloorCube fsp in floorCubeSpArray)
         {
             if (fsp.row == sp.row)
             {
-                changeArray.Add(fsp.gameobject);
+                if (fsp.column < sp.column)
+                {
+                    west.Add(fsp.gameobject);
+                }
+                else if (fsp.column > sp.column)
+                {
+                    east.Add(fsp.gameobject);
+                }
             }
             else if (fsp.column == sp.column)
             {
-                changeArray.Add(fsp.gameobject);
+                if (fsp.row < sp.row)
+                {
+                    south.Add(fsp.gameobject);
+                }
+                else if (fsp.row > sp.row)
+                {
+                    north.Add(fsp.gameobject);
+                }
             }
         }
 
-        foreach (GameObject cube in changeArray)
+        float speed = 0.1f;
+        float duration = 0.3f;
+
+        for (int i = 0; i < west.Count; i++)
         {
-            cube.GetComponent<MeshRenderer>().material.color = Color.blue;
+            GameObject cube = (GameObject)west[i];
+            cube.transform.DOLocalRotate(new Vector3(0, 0, 180), duration, RotateMode.WorldAxisAdd).SetDelay(speed * (west.Count - i));
+            cube.GetComponent<MeshRenderer>().material.DOColor(Color.blue, duration).SetDelay(speed * (west.Count - i));
         }
+
+        for (int i = 0; i < east.Count; i++)
+        {
+            GameObject cube = (GameObject)east[i];
+            cube.transform.DOLocalRotate(new Vector3(0, 0, -180), duration, RotateMode.WorldAxisAdd).SetDelay(speed * i);
+            cube.GetComponent<MeshRenderer>().material.DOColor(Color.blue, duration).SetDelay(speed * i);
+        }
+        for (int i = 0; i < south.Count; i++)
+        {
+            GameObject cube = (GameObject)south[i];
+            cube.transform.DOLocalRotate(new Vector3(-180, 0, 0), duration, RotateMode.WorldAxisAdd).SetDelay(speed * (south.Count - i));
+            cube.GetComponent<MeshRenderer>().material.DOColor(Color.blue, duration).SetDelay(speed * (south.Count - i));
+        }
+
+        for (int i = 0; i < north.Count; i++)
+        {
+            GameObject cube = (GameObject)north[i];
+            cube.transform.DOLocalRotate(new Vector3(180, 0, 0), duration, RotateMode.WorldAxisAdd).SetDelay(speed * i);
+            cube.GetComponent<MeshRenderer>().material.DOColor(Color.blue, duration).SetDelay(speed * i);
+        }
+
+        sp.gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
     }
 }
 
