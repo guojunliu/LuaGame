@@ -4,8 +4,9 @@ using UnityEngine;
 using System.Text;
 using System;
 using DG.Tweening;
+using XLua;
 
-// 礼物管理类
+[LuaCallCSharp]
 public class GameManager
 {
     // ------------- 单例 -----------

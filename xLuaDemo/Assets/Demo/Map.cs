@@ -32,7 +32,7 @@ public class Map : MonoBehaviour
             }
         }
 
-        GameManager.Instance.floorCubeSpArray = floorCubeSpArray;
+        //GameManager.Instance.floorCubeSpArray = floorCubeSpArray;
     }
 
     // Update is called once per frame

@@ -2,6 +2,101 @@
 
 <linker>
 
+	<assembly fullname="DOTween">
+	    <type fullname="DG.Tweening.AutoPlay" preserve="all"/>
+		<type fullname="DG.Tweening.AxisConstraint" preserve="all"/>
+		<type fullname="DG.Tweening.Ease" preserve="all"/>
+		<type fullname="DG.Tweening.LogBehaviour" preserve="all"/>
+		<type fullname="DG.Tweening.LoopType" preserve="all"/>
+		<type fullname="DG.Tweening.PathMode" preserve="all"/>
+		<type fullname="DG.Tweening.PathType" preserve="all"/>
+		<type fullname="DG.Tweening.RotateMode" preserve="all"/>
+		<type fullname="DG.Tweening.ScrambleMode" preserve="all"/>
+		<type fullname="DG.Tweening.TweenType" preserve="all"/>
+		<type fullname="DG.Tweening.UpdateType" preserve="all"/>
+		<type fullname="DG.Tweening.DOTween" preserve="all"/>
+		<type fullname="DG.Tweening.DOVirtual" preserve="all"/>
+		<type fullname="DG.Tweening.EaseFactory" preserve="all"/>
+		<type fullname="DG.Tweening.Tweener" preserve="all"/>
+		<type fullname="DG.Tweening.Tween" preserve="all"/>
+		<type fullname="DG.Tweening.Sequence" preserve="all"/>
+		<type fullname="DG.Tweening.TweenParams" preserve="all"/>
+		<type fullname="DG.Tweening.Core.ABSSequentiable" preserve="all"/>
+		<type fullname="DG.Tweening.Core.TweenerCore`3[UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions]" preserve="all"/>
+		<type fullname="DG.Tweening.TweenCallback" preserve="all"/>
+		<type fullname="DG.Tweening.TweenExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.AutoPlay" preserve="all"/>
+		<type fullname="DG.Tweening.AxisConstraint" preserve="all"/>
+		<type fullname="DG.Tweening.Ease" preserve="all"/>
+		<type fullname="DG.Tweening.LogBehaviour" preserve="all"/>
+		<type fullname="DG.Tweening.LoopType" preserve="all"/>
+		<type fullname="DG.Tweening.PathMode" preserve="all"/>
+		<type fullname="DG.Tweening.PathType" preserve="all"/>
+		<type fullname="DG.Tweening.RotateMode" preserve="all"/>
+		<type fullname="DG.Tweening.ScrambleMode" preserve="all"/>
+		<type fullname="DG.Tweening.TweenType" preserve="all"/>
+		<type fullname="DG.Tweening.UpdateType" preserve="all"/>
+		<type fullname="DG.Tweening.DOTween" preserve="all"/>
+		<type fullname="DG.Tweening.DOVirtual" preserve="all"/>
+		<type fullname="DG.Tweening.EaseFactory" preserve="all"/>
+		<type fullname="DG.Tweening.Tweener" preserve="all"/>
+		<type fullname="DG.Tweening.Tween" preserve="all"/>
+		<type fullname="DG.Tweening.Sequence" preserve="all"/>
+		<type fullname="DG.Tweening.TweenParams" preserve="all"/>
+		<type fullname="DG.Tweening.Core.ABSSequentiable" preserve="all"/>
+		<type fullname="DG.Tweening.Core.TweenerCore`3[UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions]" preserve="all"/>
+		<type fullname="DG.Tweening.TweenExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="DOTween43">
+	    <type fullname="DG.Tweening.ShortcutExtensions43" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions43" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="DOTween46">
+	    <type fullname="DG.Tweening.ShortcutExtensions46" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions46" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="DOTween50">
+	    <type fullname="DG.Tweening.ShortcutExtensions50" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions50" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Assembly-CSharp">
+	    <type fullname="FloorCube" preserve="all"/>
+		<type fullname="GameManager" preserve="all"/>
+		<type fullname="VirtualInputMoveDirection" preserve="all"/>
+		<type fullname="Tutorial.BaseClass" preserve="all"/>
+		<type fullname="Tutorial.TestEnum" preserve="all"/>
+		<type fullname="Tutorial.DerivedClass" preserve="all"/>
+		<type fullname="Tutorial.ICalc" preserve="all"/>
+		<type fullname="Tutorial.DerivedClassExtensions" preserve="all"/>
+		<type fullname="XLuaTest.STLuaBehaviour" preserve="all"/>
+		<type fullname="XLuaTest.LuaBehaviour" preserve="all"/>
+		<type fullname="XLuaTest.Pedding" preserve="all"/>
+		<type fullname="XLuaTest.MyStruct" preserve="all"/>
+		<type fullname="XLuaTest.MyEnum" preserve="all"/>
+		<type fullname="XLuaTest.NoGc" preserve="all"/>
+		<type fullname="XLuaTest.BaseTest" preserve="all"/>
+		<type fullname="XLuaTest.Foo1Parent" preserve="all"/>
+		<type fullname="XLuaTest.Foo2Parent" preserve="all"/>
+		<type fullname="XLuaTest.Foo1Child" preserve="all"/>
+		<type fullname="XLuaTest.Foo2Child" preserve="all"/>
+		<type fullname="XLuaTest.Foo" preserve="all"/>
+		<type fullname="XLuaTest.FooExtension" preserve="all"/>
+		<type fullname="Tutorial.DerivedClass+TestEnumInner" preserve="all"/>
+		
+	</assembly>
+
 	<assembly fullname="mscorlib">
 	    <type fullname="System.Object" preserve="all"/>
 		<type fullname="System.Collections.Generic.List`1[System.Int32]" preserve="all"/>
@@ -44,28 +139,6 @@
 
 	<assembly fullname="UnityEngine.ParticleSystemModule">
 	    <type fullname="UnityEngine.ParticleSystem" preserve="all"/>
-		
-	</assembly>
-
-	<assembly fullname="Assembly-CSharp">
-	    <type fullname="Tutorial.BaseClass" preserve="all"/>
-		<type fullname="Tutorial.TestEnum" preserve="all"/>
-		<type fullname="Tutorial.DerivedClass" preserve="all"/>
-		<type fullname="Tutorial.ICalc" preserve="all"/>
-		<type fullname="Tutorial.DerivedClassExtensions" preserve="all"/>
-		<type fullname="XLuaTest.LuaBehaviour" preserve="all"/>
-		<type fullname="XLuaTest.Pedding" preserve="all"/>
-		<type fullname="XLuaTest.MyStruct" preserve="all"/>
-		<type fullname="XLuaTest.MyEnum" preserve="all"/>
-		<type fullname="XLuaTest.NoGc" preserve="all"/>
-		<type fullname="XLuaTest.BaseTest" preserve="all"/>
-		<type fullname="XLuaTest.Foo1Parent" preserve="all"/>
-		<type fullname="XLuaTest.Foo2Parent" preserve="all"/>
-		<type fullname="XLuaTest.Foo1Child" preserve="all"/>
-		<type fullname="XLuaTest.Foo2Child" preserve="all"/>
-		<type fullname="XLuaTest.Foo" preserve="all"/>
-		<type fullname="XLuaTest.FooExtension" preserve="all"/>
-		<type fullname="Tutorial.DerivedClass+TestEnumInner" preserve="all"/>
 		
 	</assembly>
 

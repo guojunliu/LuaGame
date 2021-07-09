@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using XLua;
 
 /// <summary>
 /// author  :   jave.lin
 /// date    :   2020.02.12
 /// 虚拟摇杆 - 移动方向
 /// </summary>
+[LuaCallCSharp]
 public class VirtualInputMoveDirection : MonoBehaviour,
         IPointerDownHandler,
         IPointerUpHandler,

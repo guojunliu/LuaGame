@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{7A94633F-61E2-59CE-8A15-D3A0D43F30A4}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Demo/GameManager.cs">
     <Files>
-      <File FileName="Assets/Demo/Sphere.cs" Line="36" Column="38" />
-      <File FileName="Assets/Demo/Map.cs" Line="14" Column="6" />
-      <File FileName="Assets/Demo/FloorCube.cs" />
-      <File FileName="Assets/Demo/GameManager.cs" Line="75" Column="24" />
-      <File FileName="Assets/Demo/VirtualInputMoveDirection.cs" Line="1" Column="1" />
+      <File FileName="Assets/Demo/LuaMap.lua.txt" Line="1" Column="1" />
+      <File FileName="Assets/Demo/GameManager.cs" Line="51" Column="35" />
+      <File FileName="Assets/Demo/Map.cs" Line="38" Column="39" />
+      <File FileName="Assets/XLua/Gen/GameManagerWrap.cs" Line="115" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,6 +14,9 @@
               <Node name="Demo" expanded="True">
                 <Node name="GameManager.cs" selected="True" />
               </Node>
+              <Node name="XLua" expanded="True">
+                <Node name="Gen" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -23,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0a393566-f768-4d9b-a61c-1027e8951084" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b5828cdb-5d95-43c7-a6cc-9a8ad0b915df" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

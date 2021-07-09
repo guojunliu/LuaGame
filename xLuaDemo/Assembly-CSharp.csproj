@@ -60,6 +60,7 @@
     <Compile Include="Assets/Demo/FloorCube.cs" />
     <Compile Include="Assets/Demo/GameManager.cs" />
     <Compile Include="Assets/Demo/Map.cs" />
+    <Compile Include="Assets/Demo/STLuaBehaviour.cs" />
     <Compile Include="Assets/Demo/Sphere.cs" />
     <Compile Include="Assets/Demo/VirtualInputMoveDirection.cs" />
     <Compile Include="Assets/XLua/Examples/01_Helloworld/Helloworld.cs" />
@@ -79,8 +80,25 @@
     <Compile Include="Assets/XLua/Examples/11_RawObject/RawObjectTest.cs" />
     <Compile Include="Assets/XLua/Examples/12_ReImplementInLua/ReImplementInLua.cs" />
     <Compile Include="Assets/XLua/Examples/ExampleGenConfig.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_Core_ABSSequentiableWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_Core_TweenerCore_3_UnityEngine_Vector3_UnityEngine_Vector3_DG_Tweening_Plugins_Options_VectorOptions_Wrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_DOTweenWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_DOVirtualWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_EaseFactoryWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_SequenceWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_ShortcutExtensions43Wrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_ShortcutExtensions46Wrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_ShortcutExtensions50Wrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_ShortcutExtensionsWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_TweenExtensionsWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_TweenParamsWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_TweenSettingsExtensionsWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_TweenWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/DG_Tweening_TweenerWrap.cs" />
     <Compile Include="Assets/XLua/Gen/DelegatesGensBridge.cs" />
     <Compile Include="Assets/XLua/Gen/EnumWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/FloorCubeWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/GameManagerWrap.cs" />
     <Compile Include="Assets/XLua/Gen/PackUnpack.cs" />
     <Compile Include="Assets/XLua/Gen/System_Collections_Generic_List_1_System_Int32_Wrap.cs" />
     <Compile Include="Assets/XLua/Gen/System_Collections_IEnumeratorBridge.cs" />
@@ -117,6 +135,7 @@
     <Compile Include="Assets/XLua/Gen/UnityEngine_Vector3Wrap.cs" />
     <Compile Include="Assets/XLua/Gen/UnityEngine_Vector4Wrap.cs" />
     <Compile Include="Assets/XLua/Gen/UnityEngine_WaitForSecondsWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/VirtualInputMoveDirectionWrap.cs" />
     <Compile Include="Assets/XLua/Gen/WrapPusher.cs" />
     <Compile Include="Assets/XLua/Gen/XLuaGenAutoRegister.cs" />
     <Compile Include="Assets/XLua/Gen/XLuaTest_BaseTestWrap.cs" />
@@ -132,6 +151,7 @@
     <Compile Include="Assets/XLua/Gen/XLuaTest_MyStructWrap.cs" />
     <Compile Include="Assets/XLua/Gen/XLuaTest_NoGcWrap.cs" />
     <Compile Include="Assets/XLua/Gen/XLuaTest_PeddingWrap.cs" />
+    <Compile Include="Assets/XLua/Gen/XLuaTest_STLuaBehaviourWrap.cs" />
     <Compile Include="Assets/XLua/Src/CodeEmit.cs" />
     <Compile Include="Assets/XLua/Src/CopyByValue.cs" />
     <Compile Include="Assets/XLua/Src/DelegateBridge.cs" />
@@ -162,6 +182,7 @@
     <Compile Include="Assets/XLua/Tutorial/LoadLuaScript/Loader/CustomLoader.cs" />
     <Compile Include="Assets/XLua/Tutorial/LuaCallCSharp/LuaCallCs.cs" />
     <Compile Include="Assets/XLua/util/Xxtea.cs" />
+    <Compile Include="Assets/XLuaCustomExport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/XLua/Examples/07_AsyncTest/Resources/async_test.lua.txt" />
@@ -180,6 +201,7 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
     <None Include="Assets/Demigiant/readme_DOTweenPro.txt" />
     <None Include="Assets/Demigiant/DOTween/DOTween.XML" />
+    <None Include="Assets/Demo/LuaSphere.lua.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/Demigiant/DOTween/DOTween43.dll" />
@@ -212,6 +234,7 @@
     <None Include="Assets/XLua/CHANGELOG.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/XLua/Examples/06_Coroutine/Resources/cs_coroutine.lua.txt" />
+    <None Include="Assets/Demo/LuaMap.lua.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -398,23 +421,23 @@
     <Reference Include="UnityEditor">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.28f1c1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween46">
-      <HintPath>Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
     </Reference>
     <Reference Include="DemiLib">
       <HintPath>Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    <Reference Include="DOTween43">
+      <HintPath>Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.28f1c1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
