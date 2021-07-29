@@ -1,0 +1,43 @@
+
+require "LuaGameManager"
+
+function start()
+    local length = 5;
+    local interval = 0.5;
+    floorCubeSpArray = {};
+    cubeArray = {};
+
+    for i = 1, 20, 1 do
+        for j = 1, 15, 1 do
+
+            local cube = CS.UnityEngine.GameObject.CreatePrimitive(CS.UnityEngine.PrimitiveType.Cube);
+            cube.transform.position = CS.UnityEngine.Vector3(i * (length + interval), 0, j * (length + interval));
+            cube.transform.localScale = CS.UnityEngine.Vector3(length, 1, length);
+            cube.transform:SetParent(self.transform);
+
+            local luasp = LuaFloorCube:new();
+            luasp.column = i;
+            luasp.row = j;
+
+            local sp = cube:AddComponent(typeof(CS.LuaGameObjectSp));
+            sp.gobj = cube;
+            sp.table = luasp;
+
+            luasp.gsp = sp;
+
+            --CS.GameManager.Instance:AddCube(floorSp);
+            table.insert(floorCubeSpArray,luasp);
+            --floorCubeSpArray[(i-1)*10+j] = luasp;
+        end
+    end
+
+    print("Lua floorCubeSpArray count : " .. #floorCubeSpArray);
+    LuaGameManager:Instance().floorCubeSpArray = floorCubeSpArray;
+    print("Lua 22 floorCubeSpArray count : " .. #(LuaGameManager:Instance().floorCubeSpArray));
+    --CS.GameManager.Instance.floorCubeSpArray = floorCubeSpArray;
+
+    --cFloorCubeSpArray = CS.GameManager.Instance.floorCubeSpArray;
+    --print("C# floorCubeSpArray count : " .. cFloorCubeSpArray.Count);
+
+    --print("aaa count : " .. aa.Count)
+end

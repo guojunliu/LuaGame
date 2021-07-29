@@ -22,13 +22,10 @@ namespace XLua.CSObjectWrap
         static void wrapInit0(LuaEnv luaenv, ObjectTranslator translator)
         {
         
-            translator.DelayWrapLoader(typeof(FloorCube), FloorCubeWrap.__Register);
-        
-        
-            translator.DelayWrapLoader(typeof(GameManager), GameManagerWrap.__Register);
-        
-        
             translator.DelayWrapLoader(typeof(VirtualInputMoveDirection), VirtualInputMoveDirectionWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(LuaGameObjectSp), LuaGameObjectSpWrap.__Register);
         
         
             translator.DelayWrapLoader(typeof(object), SystemObjectWrap.__Register);
@@ -113,6 +110,9 @@ namespace XLua.CSObjectWrap
         
         
             translator.DelayWrapLoader(typeof(UnityEngine.Debug), UnityEngineDebugWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UnityEngine.MeshRenderer), UnityEngineMeshRendererWrap.__Register);
         
         
             translator.DelayWrapLoader(typeof(DG.Tweening.AutoPlay), DGTweeningAutoPlayWrap.__Register);

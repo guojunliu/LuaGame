@@ -1,0 +1,96 @@
+print('require LuaGameManager')
+
+require "LuaFloorCube"
+
+LuaGameManager = {}
+
+LuaGameManager.floorCubeSpArray = {}
+
+function LuaGameManager:new(o)
+    o = o or {}
+    setmetatable(o,self)
+    self.__index = self
+    return o
+end
+
+function LuaGameManager:Instance()
+    if self.instance == nil then
+        self.instance = self:new()
+    end
+    return self.instance
+end
+
+function LuaGameManager:ChangeCube(sp)
+    east = {};
+    west = {};
+    south = {};
+    north = {};
+
+    local meshRenderer = sp.gsp.gobj:GetComponent(typeof(CS.UnityEngine.MeshRenderer));
+    meshRenderer.material.color = CS.UnityEngine.Color.blue;
+
+    local count = #(self.floorCubeSpArray);
+    print("Lua 11 floorCubeSpArray count : " .. count);
+    if(count <= 0)
+    then
+        meshRenderer.material.color = CS.UnityEngine.Color.red;
+        return;
+    end
+
+    for i , fsp in ipairs(self.floorCubeSpArray) do
+        if (fsp.row == sp.row) then
+            if (fsp.column < sp.column) then
+                table.insert(west,fsp);
+            elseif (fsp.column > sp.column) then
+                table.insert(east,fsp);
+            end
+        elseif (fsp.column == sp.column) then
+            if (fsp.row < sp.row) then
+                table.insert(south,fsp);
+            elseif (fsp.row > sp.row) then
+                table.insert(north,fsp);
+            end
+        end
+    end
+
+    print("Lua west ：" .. #west);
+    print("Lua east ：" .. #east);
+    print("Lua south ：" .. #south);
+    print("Lua north ：" .. #north);
+
+    local speed = 0.1;
+    local duration = 0.3;
+
+    for i = 1, #west do
+        local sp = west[i];
+        local cube = sp.gsp.gobj;
+        --cube.transform:DOLocalMoveY(15, 0.5);
+        cube.transform:DOLocalRotate(CS.UnityEngine.Vector3(0,0,180), duration, CS.DG.Tweening.RotateMode.WorldAxisAdd):SetDelay(speed*(#west - i));
+        cube:GetComponent(typeof(CS.UnityEngine.MeshRenderer)).material:DOColor(CS.UnityEngine.Color.blue,duration):SetDelay(speed*(#west - i));
+    end
+
+    for i = 1, #east do
+        local sp = east[i];
+        local cube = sp.gsp.gobj;
+        --cube.transform:DOLocalMoveY(15, 0.5);
+        cube.transform:DOLocalRotate(CS.UnityEngine.Vector3(0,0,-180), duration, CS.DG.Tweening.RotateMode.WorldAxisAdd):SetDelay(speed*i);
+        cube:GetComponent(typeof(CS.UnityEngine.MeshRenderer)).material:DOColor(CS.UnityEngine.Color.blue,duration):SetDelay(speed*i);
+    end
+
+    for i = 1, #south do
+        local sp = south[i];
+        local cube = sp.gsp.gobj;
+        --cube.transform:DOLocalMoveY(15, 0.5);
+        cube.transform:DOLocalRotate(CS.UnityEngine.Vector3(-180,0,0), duration, CS.DG.Tweening.RotateMode.WorldAxisAdd):SetDelay(speed*(#south - i));
+        cube:GetComponent(typeof(CS.UnityEngine.MeshRenderer)).material:DOColor(CS.UnityEngine.Color.blue,duration):SetDelay(speed*(#south - i));
+    end
+
+    for i = 1, #north do
+        local sp = north[i];
+        local cube = sp.gsp.gobj;
+        --cube.transform:DOLocalMoveY(15, 0.5);
+        cube.transform:DOLocalRotate(CS.UnityEngine.Vector3(180,0,0), duration, CS.DG.Tweening.RotateMode.WorldAxisAdd):SetDelay(speed*i);
+        cube:GetComponent(typeof(CS.UnityEngine.MeshRenderer)).material:DOColor(CS.UnityEngine.Color.blue,duration):SetDelay(speed*i);
+    end
+
+end

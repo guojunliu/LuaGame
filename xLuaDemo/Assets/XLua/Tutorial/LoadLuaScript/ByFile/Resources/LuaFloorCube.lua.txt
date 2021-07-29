@@ -1,0 +1,12 @@
+print('require LuaFloorCube')
+
+LuaFloorCube = {}
+
+LuaFloorCube = {row = 0, column = 0, gsp = nil}                              --{}可以声明属性
+LuaFloorCube.__index = LuaFloorCube
+
+function  LuaFloorCube:new()                            --function 前面不能加 local，前面已经通过 classA限定范围了
+    local self = {}                                    --创建新的表作为实例的对象
+    setmetatable(self , LuaFloorCube)              --设置class为对象元表的__index
+    return self                                        --返回该新表
+end

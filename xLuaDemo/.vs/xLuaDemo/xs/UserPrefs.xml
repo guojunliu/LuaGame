@@ -1,31 +1,35 @@
 ﻿<Properties StartupConfiguration="{7A94633F-61E2-59CE-8A15-D3A0D43F30A4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Demo/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Demo/cshape/STLuaBehaviour.cs">
     <Files>
-      <File FileName="Assets/Demo/LuaMap.lua.txt" Line="1" Column="1" />
-      <File FileName="Assets/Demo/GameManager.cs" Line="51" Column="35" />
-      <File FileName="Assets/Demo/Map.cs" Line="38" Column="39" />
-      <File FileName="Assets/XLua/Gen/GameManagerWrap.cs" Line="115" Column="70" />
+      <File FileName="Assets/Demo/STLuaBehaviour.cs" Line="80" Column="1" />
+      <File FileName="Assets/Demo/LuaGameObjectSp.cs" />
+      <File FileName="Assets/XLua/Src/LuaEnv.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_DOTweenWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_DOVirtualWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_TweenerWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_TweenWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_TweenSettingsExtensionsWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_TweenParamsWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_TweenExtensionsWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_ShortcutExtensionsWrap.cs" />
+      <File FileName="Assets/XLua/Gen/DG_Tweening_ShortcutExtensions50Wrap.cs" />
+      <File FileName="Assets/XLua/Gen/UnityEngine_TransformWrap.cs" />
+      <File FileName="Assets/XLua/Gen/EnumWrap.cs" />
+      <File FileName="Assets/XLua/Gen/UnityEngine_BehaviourWrap.cs" />
+      <File FileName="Assets/XLua/Gen/UnityEngine_LightWrap.cs" />
+      <File FileName="Assets/XLua/Gen/UnityEngine_GameObjectWrap.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="xLuaDemo" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Demo" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
-              </Node>
-              <Node name="XLua" expanded="True">
-                <Node name="Gen" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="xLuaDemo" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b5828cdb-5d95-43c7-a6cc-9a8ad0b915df" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="61e78247-502f-4cf8-b4fd-1ea65d0cc5b7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
